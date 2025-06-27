@@ -52,7 +52,7 @@ cout<<s2;
 string s="wellcome in C++ world";
 string s1="hello";
 char str[10];
-s.copy(str, 3);     //will copy the string in the array before n-1 index. and if you want print the entire string can use .length()//
+//s.copy(str, 3);     //will copy the string in the array before n-1 index. and if you want print the entire string can use .length()//
 str[3]='\0';       //because it will print some ramdom number after three character...here only few alphabets are copied not the null characters so thats why we have to add a null character at the end of the array
 cout<<str<<endl;
 
