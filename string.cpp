@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 int main(){
-    string str;
+    /*string str;
     cout<<"enter  string";
     cin>>str;   // it will only print the word before space//
     cout<<str;
@@ -66,5 +66,29 @@ cout<<s.compare(s1);     //if the first string length is larger it will return +
 cout<<s.at(4);   //it will return the letter of that index
 cout<<s[4];   //.at and this...both are same.....we can modify also like {cout<<s[4]='W';}.  
 s[4]='w';
-cout<<s;
+cout<<s;*/
+
+
+
+
+
+
+//QUESTIONS RELATED TO STRING//
+//1. Find the length of the string
+string str="Welcome";
+/*int count=0;
+for(int i=0;str[i]!='\0';i++){
+    count++;
+}
+cout<<"length of the string is "<< count<<endl;
+return 0;*/
+
+//and by using iterator or the easy way is  using .length()//
+string::iterator it;
+int count=0;
+for(it=str.begin();it!=str.end();it++){
+    count++;
+}
+cout<<"length of the string is "<<count<<endl;
+
 }
