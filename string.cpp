@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 int main(){
-    /*string str;
+    string str;
     cout<<"enter  string";
     cin>>str;   // it will only print the word before space//
     cout<<str;
@@ -66,7 +66,7 @@ cout<<s.compare(s1);     //if the first string length is larger it will return +
 cout<<s.at(4);   //it will return the letter of that index
 cout<<s[4];   //.at and this...both are same.....we can modify also like {cout<<s[4]='W';}.  
 s[4]='w';
-cout<<s;*/
+cout<<s;
 
 
 
@@ -75,13 +75,13 @@ cout<<s;*/
 
 //QUESTIONS RELATED TO STRING//
 //1. Find the length of the string
-string str="Welcome";
-/*int count=0;
+string str="WELCOME";
+int count=0;
 for(int i=0;str[i]!='\0';i++){
     count++;
 }
 cout<<"length of the string is "<< count<<endl;
-return 0;*/
+return 0;
 
 //and by using iterator or the easy way is  using .length()//
 string::iterator it;
@@ -90,5 +90,51 @@ for(it=str.begin();it!=str.end();it++){
     count++;
 }
 cout<<"length of the string is "<<count<<endl;
+
+//2. Change case from upper to lower//
+for(int i=0;str[i]!='\0';i++){
+    str[i]=str[i]+32;      //and to change in upper case we just have to -32
+}
+cout<<str;
+
+//3. Count vowels, cononants and words
+string str2="how Many wOrds";
+int vowels=0,consonants=0,space=0;
+for(int i=0;str2[i]!='\0';i++){
+    if(str2[i]=='A' || str2[i]=='E' || str2[i]=='I' || str2[i]=='O' || str2[i]=='U' ||
+         str2[i]=='a' || str2[i]=='e' || str2[i]=='i' || str2[i]=='o' || str2[i]=='u')
+         vowels++;
+    else if(str2[i]==' ')
+         space++;
+    else
+         consonants++;
+    
+}
+
+cout<<"Vowels"<<vowels<<endl;
+cout<<"consonants"<<consonants<<endl;
+cout<<"words"<<space+1<<endl;
+
+
+//4. Checking palindrome
+string strr="MADAM";
+string rev="";
+
+for (int i = strr.length() - 1; i >= 0; i--) {
+        rev += strr[i];
+    }
+
+cout<<strr<<" ";
+if (strr == rev)
+        cout << "Palindrome";
+    else
+        cout << "Not a palindrome";
+
+//5. Find username from gmail
+string email="John123@gmail.com";
+int i=(int)email.find('@');
+string uname=email.substr(0,i);
+cout<<"Username is "<<uname<<endl;
+
 
 }
